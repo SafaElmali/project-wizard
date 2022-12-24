@@ -60,6 +60,23 @@ prompt(questions).then((answers) => {
         stdio: "inherit",
       });
       break;
+    case "Vue":
+      execSync(
+        `npm install -g @vue/cli && vue create ${answers.projectName} && cd ${
+          answers.projectName
+        } && npm init -y &&  ${
+          (answers.packages.join(" "), { stdio: "inherit" })
+        }`
+      );
+      break;
+    case "Express":
+      fs.mkdirSync(answers.projectName);
+      execSync(
+        `cd ${answers.projectName} && npm init -y && npm install express ${
+          (answers.packages.join(" "), { stdio: "inherit" })
+        }`
+      );
+      break;
   }
 
   console.log(`Installing packages: ${answers.packages.join(", ")}`);
