@@ -5,7 +5,7 @@ The Project Wizard is a command-line tool that helps you quickly create a new pr
 ## Features
 
 - Supports creating frontend projects using React or Vue
-- Supports creating backend projects using Express or NestJS
+- Supports creating backend projects using Express.
 - Allows you to select popular packages to install for each framework
 - Prints helpful messages about each framework after project creation
 
